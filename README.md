@@ -4,12 +4,14 @@ SPDX-FileCopyrightText: 2023 Deutsche Telekom AG
 SPDX-License-Identifier: CC0-1.0    
 -->
 
-# my-sample-project
+# Open Telekom Integration Platform
 
 ## About
 
-This project is ...
-<!-- TODO -->
+**This repository contains the overarching documentation.**
+
+For the actual code, an overview of the available repositories is available here: [Repositories](repositories.md).
+
 
 ## Code of Conduct
 
@@ -22,26 +24,25 @@ By participating in this project, you agree to abide by its [Code of Conduct](./
 This project follows the [REUSE standard for software licensing](https://reuse.software/).
 Each file contains copyright and license information, and license texts can be found in the [./LICENSES](./LICENSES) folder. For more information visit https://reuse.software/.
 
-### REUSE
+## Getting Started
 
-The [reuse tool](https://github.com/fsfe/reuse-tool) can be used to verify and establish compliance when new files are added. 
+A comprehensive guide on how to get started with the Open Telekom Integration Platform is available
+here: [Getting Started](getting-started.md).
 
-For more information on the reuse tool visit https://github.com/fsfe/reuse-tool.
+## In A Nutshell
 
-**Check for incompliant files (= not properly licensed)**
+| Decoupling Done Right                                                                                                                                                                                                                                                                                   | Custom Open Source                                                                                                                    | Secure By Design                                                                                                                      |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| The Open Telekom Integration Platform's fundamentals are cloud-centric and API-first. It is a complete and integrated suite of distributed, cloud-native and cloud-agnostic components for synchronous APIs, asynchronous messaging patterns and file transfer. It is designed to be deployed on Kubernetes. | It is built based on top of open-source software, with all custom extensions capsuled in separate modules to remain product agnostic. | It provides secure and auditable access to APIs, with features like 4-eyes-principle, approval expiration, recertification, and more. |
 
-Run `pipx run reuse lint`
+### Paradigms
 
-**Get an SPDX file with all licensing information for this project (not for dependencies!)**
+| Declarative Configuration                                                                                                                                                                                                                                                                                        | Pipeline-Driven                                                                                                                                                                                            | Self-Service                                                                                                                                                        |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| The Open Telekom Integration Platform is configured declaratively, using YAML files. This allows for easy versioning, and the ability to use tools like Git to manage the configuration. You are just defining the desired state of the system, and the configuration tool (namely Rover) will take care of the rest. | Rover can run in a CICD-pipeline and is designed for that purpose. It enables the configuration to be integrated into a CICD-pipeline alongside the application code, and to be deployed together with it. | The Open Telekom Integration Platform is designed to be used by developers and operators alike. It provides a self-service eliminating the need for a central middleman. |
 
-Run `pipx run reuse spdx`
+### Core Capabilities
 
-**Add licensing and copyright statements to a new file**
-
-Run `pipx run reuse annotate -c="<COPYRIGHT>" -l="<LICENSE-SPDX-IDENTIFIER>" <file>`
-
-Replace `<COPYRIGHT>` with the copyright holder, e.g "Deutsche Telekom AG", and `<LICENSE-SPDX-IDENTIFIER>` with the ID of the license the file should be under. For possible IDs see https://spdx.org/licenses/.
-
-**Add a new license text**
-
-Run `pipx run reuse download --all` to add license texts for all licenses detected in the project.
+| API Management                                                                                                                                                                                                                                                                                            | Event-Driven Integration (Pub/Sub)                                                                                                                                                                                                                                                                   | File Transfer                                                                                                                                                                                             |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| The Open Telekom Integration Platform supports the whole API lifecycle and allows seamless, cloud-independent integration of services. Further, it enables a fine-grained and vigilant API access control. The communication is secure by design, utilizing OAuth 2.0 and an integrated permission management. | The Open Telekom Integration Platform offers a component for asynchronous communication of services. It focuses on a resilient and loss-free event delivery, while maintaining high throughput volumes. Advanced filtering, payload validation and conditional delivery are also part of the feature set. | The Open Telekom Integration Platform enables large files to be shared between multiple services via the gateway mesh. It supports transfers and seamless end-to-end encryption of files without a size limit. |

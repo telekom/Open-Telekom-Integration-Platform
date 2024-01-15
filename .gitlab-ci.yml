@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: 2023 Deutsche Telekom AG
+#
+# SPDX-License-Identifier: CC0-1.0
+
+image: "maven:3.8.3-openjdk-17"
+
+stages:
+  - lint
+  - push
+
+reuse-lint:
+  stage: lint
+  image:
+    name: "dockerhub.devops.telekom.de/python:3"
+    entrypoint: [""]
+  needs: []
+  rules:
+    - when: always
+  before_script: >-
+    python3 -m pip install --user --upgrade pipx && 
+    python3 -m pipx ensurepath &&
+    source ~/.bashrc
+  script:
+    - pipx run reuse lint
+
+github-push:
+  stage: push
+  needs: []
+  rules:
+    - when: manual
+  script:
+    - git remote add github https://$GITHUB_ACCESS_TOKEN@github.com/$GITHUB_PROJECT_PATH.git
+    - git remote -v
+    - git remote update
+    - git checkout -b $CI_COMMIT_BRANCH
+    - git push --set-upstream github $CI_COMMIT_BRANCH
