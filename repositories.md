@@ -12,12 +12,12 @@ The list below provides an overview of the available repositories of the Open Te
 
 - [x] [Overarching documentation](README.md)
 - [x] Gateway
-    - [x] [Gateway-Charts](https://github.com/telekom/gateway-charts)
+    - [x] [Gateway-Kong-Charts](https://github.com/telekom/gateway-kong-charts)
     - [x] [Gateway-Kong-Image](https://github.com/telekom/gateway-kong-image)
     - [x] [Gateway-Jumper](https://github.com/telekom/gateway-jumper)
-    - [x] [Gateway-Jumper-Issuer-Service](https://github.com/telekom/gateway-jumper-issuer-service)
+    - [x] [Gateway-Issuer-Service](https://github.com/telekom/gateway-issuer-service)
 - [x] Identity Provider
-    - [x] [Identity-Iris-Charts](https://github.com/telekom/identity-iris-charts)
+    - [x] [Identity-Iris-Keycloak-Charts](https://github.com/telekom/identity-iris-keycloak-charts)
     - [x] [Identity-Iris-Keycloak-Image](https://github.com/telekom/identity-iris-keycloak-image)
 
 ## Roadmap
