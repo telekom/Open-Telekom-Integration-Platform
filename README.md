@@ -8,25 +8,34 @@ SPDX-License-Identifier: CC0-1.0
 
 ## About
 
+The Open Telekom Integration Platform is a complete and integrated suite of distributed, cloud-native and cloud-agnostic
+components for synchronous APIs, asynchronous messaging patterns and file transfer. It is an integral part of Telekom's
+architecture strategy.
+
+The platform is modular in nature. It is currently in an early release stage. Thus, the key components are already
+available with many more to follow.
+
 **This repository contains the overarching documentation.**
 
 For the actual code, an overview of the available repositories is available here: [Repositories](repositories.md).
 
-
 ## Code of Conduct
 
-This project has adopted the [Contributor Covenant](https://www.contributor-covenant.org/) in version 2.1 as our code of conduct. Please see the details in our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). All contributors must abide by the code of conduct.
+This project has adopted the [Contributor Covenant](https://www.contributor-covenant.org/) in version 2.1 as our code of
+conduct. Please see the details in our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). All contributors must abide by the code
+of conduct.
 
 By participating in this project, you agree to abide by its [Code of Conduct](./CODE_OF_CONDUCT.md) at all times.
 
 ## Licensing
 
 This project follows the [REUSE standard for software licensing](https://reuse.software/).
-Each file contains copyright and license information, and license texts can be found in the [./LICENSES](./LICENSES) folder. For more information visit https://reuse.software/.
+Each file contains copyright and license information, and license texts can be found in the [./LICENSES](./LICENSES)
+folder. For more information visit https://reuse.software/.
 
 ## Getting Started
 
-A comprehensive guide on how to get started with the Open Telekom Integration Platform is available
+A comprehensive guide on how to get started with the installation of the Open Telekom Integration Platform is available
 here: [Getting Started](getting-started.md).
 
 ## In A Nutshell
