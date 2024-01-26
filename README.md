@@ -40,6 +40,15 @@ here: [Getting Started](getting-started.md).
 
 ## In A Nutshell
 
+### High-Level Architecture
+
+The picture below shows the high-level architecture of the Open Telekom Integration Platform. Further, it indicates the
+progress of open-sourcing the platform's components.
+
+![High-Level Architecture](./img/Open-Telekom-Integration-Platform_High-Level-Architecture.svg)
+
+### Principles
+
 | Decoupling Done Right                                                                                                                                                                                                                                                                                        | Custom Open Source                                                                                                                    | Secure By Design                                                                                                                      |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | The Open Telekom Integration Platform's fundamentals are cloud-centric and API-first. It is a complete and integrated suite of distributed, cloud-native and cloud-agnostic components for synchronous APIs, asynchronous messaging patterns and file transfer. It is designed to be deployed on Kubernetes. | It is built based on top of open-source software, with all custom extensions capsuled in separate modules to remain product agnostic. | It provides secure and auditable access to APIs, with features like 4-eyes-principle, approval expiration, recertification, and more. |
