@@ -2,8 +2,6 @@
 #
 # SPDX-License-Identifier: CC0-1.0
 
-image: "maven:3.8.3-openjdk-17"
-
 stages:
   - lint
   - push
@@ -25,6 +23,7 @@ reuse-lint:
 
 github-push:
   stage: push
+  image: "dockerhub.devops.telekom.de/alpine/git:2.43.0"
   needs: []
   rules:
     - when: manual
