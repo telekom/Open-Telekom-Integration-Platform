@@ -17,7 +17,7 @@ available with many more to follow.
 
 **This repository contains the overarching documentation.**
 
-For the actual code, an overview of the available repositories is available here: [Repositories](repositories.md).
+For the actual code, an overview of the available repositories is available here: [Repositories](https://github.com/telekom/Open-Telekom-Integration-Platform/wiki/Repository-Overview).
 
 ## Code of Conduct
 
@@ -36,7 +36,7 @@ folder. For more information visit https://reuse.software/.
 ## Getting Started
 
 A comprehensive guide on how to get started with the installation of the Open Telekom Integration Platform is available
-here: [Getting Started](getting-started.md).
+here: [Getting Started](https://github.com/telekom/Open-Telekom-Integration-Platform/wiki/Getting-Started).
 
 ## In A Nutshell
 
