@@ -6,6 +6,10 @@ SPDX-License-Identifier: CC0-1.0
 
 # Open Telekom Integration Platform
 
+<p align="center">
+    <img src="img/Open-Telekom-Integration-Platform_Visual.svg" alt="Visual" width="200">
+</p>
+
 ## About
 
 The Open Telekom Integration Platform is a complete and integrated suite of distributed, cloud-native and cloud-agnostic

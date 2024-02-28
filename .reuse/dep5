@@ -2,7 +2,3 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Open Telekom Integration Platform
 Upstream-Contact: Deutsche Telekom AG <opensource@telekom.de>
 Source: https://github.com/telekom/Open-Telekom-Integration-Platform
-
-Files: img/*
-Copyright: 2023 Deutsche Telekom AG
-License: CC0-1.0
