@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Deutsche Telekom AG
+#
+# SPDX-License-Identifier: Apache-2.0
+
+ARG BASH_CURL_VERSION=latest
+FROM quay.io/curl/curl-base:${BASH_CURL_VERSION}
+
+RUN apk add --no-cache bash
+
+ENTRYPOINT ["/bin/bash", "-c", "while true; do sleep 86400; done"]
