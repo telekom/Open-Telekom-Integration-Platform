@@ -1,0 +1,50 @@
+# SPDX-FileCopyrightText: 2025 Deutsche Telekom AG
+#
+# SPDX-License-Identifier: Apache-2.0
+
+name: helpers
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+
+jobs:
+  build-bash-curl:
+    uses: ./.github/workflows/_fetch_build_push_image.yml
+    with:
+      source_repository: '${{ github.repository }}'
+      source_dockerfile: 'build/helpers/Dockerfile.bash-curl'
+      target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/bash-curl'
+      target_architecture: 'linux/amd64'
+      target_registry: 'ghcr.io'
+      target_registry_username: ${{ github.actor }}
+    secrets:
+      target_registry_password: ${{ secrets.GITHUB_TOKEN }}
+
+  build-haproxy:
+    uses: ./.github/workflows/_fetch_build_push_image.yml
+    with:
+      source_repository: '${{ github.repository }}'
+      source_dockerfile: 'build/helpers/Dockerfile.haproxy'
+      target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/haproxy'
+      target_architecture: 'linux/amd64'
+      target_registry: 'ghcr.io'
+      target_registry_username: ${{ github.actor }}
+    secrets:
+      target_registry_password: ${{ secrets.GITHUB_TOKEN }}
+
+  build-postgresql:
+    uses: ./.github/workflows/_fetch_build_push_image.yml
+    with:
+      source_repository: '${{ github.repository }}'
+      source_dockerfile: 'build/helpers/Dockerfile.postgresql'
+      target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/postgresql'
+      target_architecture: 'linux/amd64'
+      target_registry: 'ghcr.io'
+      target_registry_username: ${{ github.actor }}
+    secrets:
+      target_registry_password: ${{ secrets.GITHUB_TOKEN }}

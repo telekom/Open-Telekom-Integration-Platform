@@ -1,0 +1,53 @@
+# SPDX-FileCopyrightText: 2025 Deutsche Telekom AG
+#
+# SPDX-License-Identifier: Apache-2.0
+
+## Build jwt-keycloak plugin
+
+ARG KONG_VERSION=2.8.3
+FROM docker.io/kong:${KONG_VERSION} AS builder
+
+# Root needed to install dependencies
+USER root
+
+# Starting from kong 3.2 they move from alpine to debian .. so conditional install logic is needed
+ARG DISTO_ADDONS="git zip"
+RUN if [ -x "$(command -v apk)" ]; then apk add --no-cache $DISTO_ADDONS; \
+    elif [ -x "$(command -v apt-get)" ]; then apt-get update && apt-get install $DISTO_ADDONS; \
+    fi
+
+RUN git clone https://github.com/telekom-digioss/kong-plugin-jwt-keycloak.git /tmp
+
+WORKDIR /tmp
+
+ARG JWT_KC_PLUGIN_VERSION=1.3.0-1
+RUN luarocks make && luarocks pack kong-plugin-jwt-keycloak ${JWT_KC_PLUGIN_VERSION}
+
+## Create Image
+FROM docker.io/kong:${KONG_VERSION}
+
+ENV KONG_PLUGINS="bundled,jwt-keycloak"
+
+COPY --from=builder /tmp/*.rock /tmp/
+
+# Root needed for installing plugin
+USER root
+
+ARG JWT_KC_PLUGIN_VERSION=1.3.0-1
+RUN luarocks install /tmp/kong-plugin-jwt-keycloak-${JWT_KC_PLUGIN_VERSION}.all.rock
+
+## PostgreSQL v14+ fix: install luaossl
+ARG FIX_DEPENDENCIES="gcc libc-dev openssl-dev"
+RUN if [ -x "$(command -v apk)" ]; then apk add --no-cache $FIX_DEPENDENCIES; \
+    elif [ -x "$(command -v apt-get)" ]; then apt-get update && apt-get install $FIX_DEPENDENCIES; \
+    fi
+
+RUN luarocks install luaossl OPENSSL_DIR=/usr/local/kong CRYPTO_DIR=/usr/local/kong
+
+# Cleanup
+RUN if [ -x "$(command -v apk)" ]; then apk del $FIX_DEPENDENCIES; \
+    elif [ -x "$(command -v apt-get)" ]; then apt-get remove --purge -y $FIX_DEPENDENCIES; \
+    fi
+
+# Switch back to kong user
+USER kong

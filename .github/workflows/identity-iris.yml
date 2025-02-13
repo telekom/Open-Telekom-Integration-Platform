@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2025 Deutsche Telekom AG
+#
+# SPDX-License-Identifier: Apache-2.0
+
+name: identity_iris
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+
+jobs:
+  build-identity-iris-keycloak:
+    uses: ./.github/workflows/_fetch_build_push_image.yml
+    with:
+      source_repository: 'telekom/identity-iris-keycloak-image'
+      source_dockerfile: 'Dockerfile.multi-stage'
+      target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/identity-iris-keycloak'
+      target_architecture: 'linux/amd64'
+      target_registry: 'ghcr.io'
+      target_registry_username: ${{ github.actor }}
+    secrets:
+      target_registry_password: ${{ secrets.GITHUB_TOKEN }}
