@@ -73,6 +73,7 @@ jobs:
         repository: ${{ inputs.source_repository }}
         token: ${{ secrets.GITHUB_TOKEN }}
         ref: ${{ inputs.source_branch }}
+        submodules: 'true'
 
     - name: Docker Login
       if: ${{ inputs.target_registry != '' }}

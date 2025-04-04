@@ -40,27 +40,12 @@ jobs:
   build-gateway-kong:
     uses: ./.github/workflows/_fetch_build_push_image.yml
     with:
-      source_repository: 'telekom-digioss/kong-plugin-jwt-keycloak'
-      source_branch: 'master'
+      source_repository: 'telekom/gateway-kong-image'
+      source_branch: 'main'
       source_build_args: |
         KONG_VERSION=2.8.3
         PLUGIN_VERSION=1.3.0-1
       target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/gateway-kong'
-      target_architecture: 'linux/amd64'
-      target_registry: 'ghcr.io'
-      target_registry_username: ${{ github.actor }}
-    secrets:
-      target_registry_password: ${{ secrets.GITHUB_TOKEN }}
-
-  build-gateway-kong-postgresql-fix:
-    uses: ./.github/workflows/_fetch_build_push_image.yml
-    with:
-      source_repository: '${{ github.repository }}'
-      source_dockerfile: 'build/gateway/Dockerfile.gateway-kong-postgresql-fix'
-      source_build_args: |
-        KONG_VERSION=2.8.3
-        JWT_KC_PLUGIN_VERSION=1.3.0-1
-      target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/gateway-kong-postgresql-fix'
       target_architecture: 'linux/amd64'
       target_registry: 'ghcr.io'
       target_registry_username: ${{ github.actor }}
