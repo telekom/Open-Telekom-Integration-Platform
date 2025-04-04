@@ -1,0 +1,10 @@
+version = 1
+SPDX-PackageName = "Open Telekom Integration Platform"
+SPDX-PackageSupplier = "Deutsche Telekom AG <opensource@telekom.de>"
+SPDX-PackageDownloadLocation = "https://github.com/telekom/Open-Telekom-Integration-Platform"
+
+[[annotations]]
+path = [".gitignore", ".gitmodules", ".DS_Store", '.gitlab-ci.yml']
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Copyright 2025 Deutsche Telekom AG"
+SPDX-License-Identifier = "CC0-1.0"
