@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-ARG BASH_CURL_VERSION=latest
+ARG BASH_CURL_VERSION=8.13.0
 FROM quay.io/curl/curl-base:${BASH_CURL_VERSION}
 
 RUN apk add --no-cache bash jq

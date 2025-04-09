@@ -22,7 +22,7 @@ jobs:
       source_repository: 'telekom/pubsub-horizon-starlight'
       source_dockerfile: 'Dockerfile.multi-stage'
       target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/pubsub-horizon-starlight'
-      target_architecture: 'linux/amd64'
+      target_architecture: 'linux/amd64, linux/arm64'
       target_registry: 'ghcr.io'
       target_registry_username: ${{ github.actor }}
     secrets:
@@ -34,7 +34,7 @@ jobs:
       source_repository: 'telekom/pubsub-horizon-galaxy'
       source_dockerfile: 'Dockerfile.multi-stage'
       target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/pubsub-horizon-galaxy'
-      target_architecture: 'linux/amd64'
+      target_architecture: 'linux/amd64, linux/arm64'
       target_registry: 'ghcr.io'
       target_registry_username: ${{ github.actor }}
     secrets:
@@ -46,7 +46,7 @@ jobs:
       source_repository: 'telekom/pubsub-horizon-comet'
       source_dockerfile: 'Dockerfile.multi-stage'
       target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/pubsub-horizon-comet'
-      target_architecture: 'linux/amd64'
+      target_architecture: 'linux/amd64, linux/arm64'
       target_registry: 'ghcr.io'
       target_registry_username: ${{ github.actor }}
     secrets:
@@ -58,7 +58,7 @@ jobs:
       source_repository: 'telekom/pubsub-horizon-pulsar'
       source_dockerfile: 'Dockerfile.multi-stage'
       target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/pubsub-horizon-pulsar'
-      target_architecture: 'linux/amd64'
+      target_architecture: 'linux/amd64, linux/arm64'
       target_registry: 'ghcr.io'
       target_registry_username: ${{ github.actor }}
     secrets:
@@ -70,7 +70,7 @@ jobs:
       source_repository: 'telekom/pubsub-horizon-golaris'
       source_dockerfile: 'Dockerfile'
       target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/pubsub-horizon-golaris'
-      target_architecture: 'linux/amd64'
+      target_architecture: 'linux/amd64, linux/arm64'
       target_registry: 'ghcr.io'
       target_registry_username: ${{ github.actor }}
     secrets:
@@ -82,7 +82,7 @@ jobs:
       source_repository: 'telekom/pubsub-horizon-vortex'
       source_dockerfile: 'Dockerfile'
       target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/pubsub-horizon-vortex'
-      target_architecture: 'linux/amd64'
+      target_architecture: 'linux/amd64, linux/arm64'
       target_registry: 'ghcr.io'
       target_registry_username: ${{ github.actor }}
     secrets:
@@ -97,7 +97,7 @@ jobs:
       source_repository: 'telekom/pubsub-horizon-cosmoparrot'
       source_dockerfile: 'Dockerfile'
       target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/pubsub-horizon-cosmoparrot'
-      target_architecture: 'linux/amd64'
+      target_architecture: 'linux/amd64, linux/arm64'
       target_registry: 'ghcr.io'
       target_registry_username: ${{ github.actor }}
     secrets:
