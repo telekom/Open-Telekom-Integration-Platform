@@ -19,7 +19,7 @@ jobs:
       source_repository: 'telekom/gateway-jumper'
       source_dockerfile: 'Dockerfile.multi-stage'
       target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/gateway-jumper'
-      target_architecture: 'linux/amd64'
+      target_architecture: 'linux/amd64, linux/arm64'
       target_registry: 'ghcr.io'
       target_registry_username: ${{ github.actor }}
     secrets:
@@ -31,7 +31,7 @@ jobs:
       source_repository: 'telekom/gateway-issuer-service'
       source_dockerfile: 'Dockerfile.multi-stage'
       target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/gateway-issuer-service'
-      target_architecture: 'linux/amd64'
+      target_architecture: 'linux/amd64, linux/arm64'
       target_registry: 'ghcr.io'
       target_registry_username: ${{ github.actor }}
     secrets:
@@ -46,7 +46,7 @@ jobs:
         KONG_VERSION=2.8.3
         PLUGIN_VERSION=1.3.0-1
       target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/gateway-kong'
-      target_architecture: 'linux/amd64'
+      target_architecture: 'linux/amd64, linux/arm64'
       target_registry: 'ghcr.io'
       target_registry_username: ${{ github.actor }}
     secrets:

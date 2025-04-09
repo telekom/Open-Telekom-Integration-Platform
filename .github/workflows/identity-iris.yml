@@ -21,7 +21,7 @@ jobs:
       source_build_args: |
         BASE_IMAGE_TAG=26.0.8
       target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/identity-iris-keycloak'
-      target_architecture: 'linux/amd64'
+      target_architecture: 'linux/amd64, linux/arm64'
       target_registry: 'ghcr.io'
       target_registry_username: ${{ github.actor }}
     secrets:

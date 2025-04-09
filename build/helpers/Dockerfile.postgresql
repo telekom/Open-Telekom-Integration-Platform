@@ -2,5 +2,5 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-ARG POSTGRESQL_VERSION=12-debian-10
+ARG POSTGRESQL_VERSION=16.5
 FROM bitnami/postgresql:${POSTGRESQL_VERSION}
