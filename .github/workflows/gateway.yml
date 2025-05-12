@@ -30,7 +30,7 @@ jobs:
     with:
       source_repository: 'telekom/gateway-issuer-service'
       source_dockerfile: 'Dockerfile.multi-stage'
-      target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/gateway-issuer-service'
+      target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/gateway-issuer-service-go'
       target_architecture: 'linux/amd64'
       target_registry: 'ghcr.io'
       target_registry_username: ${{ github.actor }}
