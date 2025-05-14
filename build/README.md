@@ -43,6 +43,7 @@ Parameters that can be adjusted are:
 | `source_branch`            | The branch to pull the source code from            | `main`        | Yes      | `main`                                                              |
 | `source_dockerfile`        | The path to the Dockerfile                         | `Dockerfile`  | No       | `Dockerfile`                                                        |
 | `source_build_context`     | The context to build the image from                | `.`           | No       | `.`                                                                 |
+| `source_build_args`        | List of build-time variables                       | `''`          | No       | `BASE_IMAGE_TAG=26.0.8`                                             |
 | `target_image`             | The name of the image to build                     | `''`          | Yes      | `ghcr.io/${{ github.repository_owner }}/o28m/gateway-jumper:latest` |
 | `target_architecture`      | The platforms/architectures to build the image for | `linux/amd64` | No       | `linux/amd64,linux/arm64`                                           |
 | `target_registry`          | The registry to push the image to                  | `''`          | No       | `ghcr.io`                                                           |
