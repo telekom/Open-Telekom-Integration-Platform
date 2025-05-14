@@ -23,7 +23,7 @@ The workflows are bundled per component and can be found in the `.github/workflo
   - [x] Identity-Iris-Keycloak (A modified Keycloak image)
 - [x] [Gateway](../.github/workflows/gateway.yml):
   - [x] Gateway-Jumper (A sidecar container for the Gateway)
-  - [x] Gateway-Issuer-Service (A sidecar container for the Gateway)
+  - [x] Gateway-Issuer-Service-Go (A sidecar container for the Gateway)
   - [x] Gateway-Kong (A modified Kong image with several plugins and compatible with all Postgres versions >= 13, also 14+)
 - [x] [Helper Images](../.github/workflows/helpers.yml):
   - [x] Bash-Curl (A helper image with pre-installed bash and curl to bootstrap and configure the Gateway)
