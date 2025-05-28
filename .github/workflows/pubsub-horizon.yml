@@ -87,6 +87,18 @@ jobs:
       target_registry_username: ${{ github.actor }}
     secrets:
       target_registry_password: ${{ secrets.GITHUB_TOKEN }}
+  # Horizon Quasar
+  build-pubsub-horizon-quasar:
+    uses: ./.github/workflows/_fetch_build_push_image.yml
+    with:
+      source_repository: 'telekom/pubsub-horizon-quasar'
+      source_dockerfile: 'Dockerfile'
+      target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/pubsub-horizon-quasar'
+      target_architecture: 'linux/amd64, linux/arm64'
+      target_registry: 'ghcr.io'
+      target_registry_username: ${{ github.actor }}
+    secrets:
+      target_registry_password: ${{ secrets.GITHUB_TOKEN }}
   #
   # Horizon Tools:
   #
