@@ -13,8 +13,8 @@ Every repository is linked to its GitHub page, where you can find more informati
 
 ## Documentations
 
-- [x] [Overarching documentation](https://github.com/telekom/Open-Telekom-Integration-Platform)
-    - [x] [Event-Driven Integration / Pubsub](https://github.com/telekom/pubsub-horizon)
+- [Overarching documentation](https://github.com/telekom/Open-Telekom-Integration-Platform)
+- [Event-Driven Integration / Pubsub](https://github.com/telekom/pubsub-horizon)
 
 ## Components and Recommended Versions
 
@@ -23,20 +23,21 @@ It further indicates the versions currently recommended for non-productive or pr
 
 ### Gateway
 
-| Name                                                                              |                              Latest Version                              | Non-Prod Version | Production Version | Mandatory |
-|-----------------------------------------------------------------------------------|:------------------------------------------------------------------------:|:----------------:|:------------------:|:---------:|
-| **[Gateway-Kong-Charts](https://github.com/telekom/gateway-kong-charts)**         |  **[latest](https://github.com/telekom/gateway-kong-charts/tree/main)**  |      **-**       |       **-**        |     ✅     |
-| [Gateway-Kong-Image](https://github.com/telekom/gateway-kong-image)               |    [latest](https://github.com/telekom/gateway-kong-image/tree/main)     |        -         |         -          |     ✅     |
-| [Gateway-Issuer-Service-Go](https://github.com/telekom/gateway-issuer-service-go) | [latest](https://github.com/telekom/gateway-issuer-service-go/tree/main) |        -         |         -          |     ✅     |
-| [Gateway-Jumper](https://github.com/telekom/gateway-jumper)                       |      [latest](https://github.com/telekom/gateway-jumper/tree/main)       |        -         |         -          |     ✅     |
-| [Gateway-Rotator](https://github.com/telekom/gateway-rotator)                     |      [latest](https://github.com/telekom/gateway-rotator/tree/main)      |        -         |         -          |     ❌     |
+| Name                                                                              |                              Latest Version                              |                            Non-Prod Version                             |                           Production Version                            |        Mandatory         |
+|-----------------------------------------------------------------------------------|:------------------------------------------------------------------------:|:-----------------------------------------------------------------------:|:-----------------------------------------------------------------------:|:------------------------:|
+| **[Gateway-Kong-Charts](https://github.com/telekom/gateway-kong-charts)**         |  **[latest](https://github.com/telekom/gateway-kong-charts/tree/main)**  | **[6.0.0](https://github.com/telekom/gateway-kong-charts/tree/6.0.0)**  | **[6.0.0](https://github.com/telekom/gateway-kong-charts/tree/6.0.0)**  |            ✅             |
+| [Gateway-Kong-Image](https://github.com/telekom/gateway-kong-image)               |    [latest](https://github.com/telekom/gateway-kong-image/tree/main)     |    [1.0.0](https://github.com/telekom/gateway-kong-image/tree/1.0.0)    |    [1.0.0](https://github.com/telekom/gateway-kong-image/tree/1.0.0)    |            ✅             |
+| [Gateway-Issuer-Service](https://github.com/telekom/gateway-issuer-service)       |  [latest](https://github.com/telekom/gateway-issuer-service/tree/main)   | [1.11.1](https://github.com/telekom/gateway-issuer-service/tree/1.11.1) | [1.11.1](https://github.com/telekom/gateway-issuer-service/tree/1.11.1) |            ✅             |
+| [Gateway-Issuer-Service-Go](https://github.com/telekom/gateway-issuer-service-go) | [latest](https://github.com/telekom/gateway-issuer-service-go/tree/main) |                                    -                                    |                                    -                                    | from chart version 7.0.0 |
+| [Gateway-Jumper](https://github.com/telekom/gateway-jumper)                       |      [latest](https://github.com/telekom/gateway-jumper/tree/main)       |     [3.19.1](https://github.com/telekom/gateway-jumper/tree/3.19.1)     |     [3.19.1](https://github.com/telekom/gateway-jumper/tree/3.19.1)     |            ✅             |
+| [Gateway-Rotator](https://github.com/telekom/gateway-rotator)                     |      [latest](https://github.com/telekom/gateway-rotator/tree/main)      |                                    -                                    |                                    -                                    | from chart version 7.0.0 |
 
 ### Identity Provider
 
-| Name                                                                                          |                                  Latest Version                                  | Non-Prod Version | Production Version | Mandatory |
-|-----------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------:|:----------------:|:------------------:|:---------:|
-| **[Identity-Iris-Keycloak-Charts](https://github.com/telekom/identity-iris-keycloak-charts)** | **[latest](https://github.com/telekom/identity-iris-keycloak-charts/tree/main)** |      **-**       |       **-**        |     ✅     |
-| [Identity-Iris-Keycloak-Image](https://github.com/telekom/identity-iris-keycloak-image)       |   [latest](https://github.com/telekom/identity-iris-keycloak-image/tree/main)    |        -         |         -          |     ✅     |
+| Name                                                                                          |                                  Latest Version                                  |                                 Non-Prod Version                                 |                                Production Version                                | Mandatory |
+|-----------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------:|:---------:|
+| **[Identity-Iris-Keycloak-Charts](https://github.com/telekom/identity-iris-keycloak-charts)** | **[latest](https://github.com/telekom/identity-iris-keycloak-charts/tree/main)** | **[1.2.4](https://github.com/telekom/identity-iris-keycloak-charts/tree/1.2.4)** | **[1.2.4](https://github.com/telekom/identity-iris-keycloak-charts/tree/1.2.4)** |     ✅     |
+| [Identity-Iris-Keycloak-Image](https://github.com/telekom/identity-iris-keycloak-image)       |   [latest](https://github.com/telekom/identity-iris-keycloak-image/tree/main)    |   [1.1.1](https://github.com/telekom/identity-iris-keycloak-image/tree/1.1.1)    |   [1.1.1](https://github.com/telekom/identity-iris-keycloak-image/tree/1.1.1)    |     ✅     |
 
 ### Event-Driven Integration / Pubsub
 
