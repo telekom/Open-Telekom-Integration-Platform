@@ -20,7 +20,7 @@ Currently, it is tested with Kubernetes version **1.31**.
 
 - Kubernetes Ingress Controller (preferably [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/))
 - Kubernetes DNS (preferably [CoreDNS](https://coredns.io/))
-- Persistent Volumes (NFS or [block storage](https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html) like gp2)
+- Persistent Volumes (NFS or [block storage](https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html) like gp3)
 - TLS certificate management (e.g. [cert-manager](https://cert-manager.io/))
 
 ### Databases
