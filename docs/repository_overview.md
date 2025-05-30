@@ -43,15 +43,15 @@ It further indicates the versions currently recommended for non-productive or pr
 
 | Name                                                                                    |                                Latest Version                                 | Non-Prod Version | Production Version | Mandatory |
 |:----------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------:|:----------------:|:------------------:|:---------:|
-| **[Pubsub-Horizon-Helm-Charts](https://github.com/telekom/pubsub-horizon-helm-charts)** | **[latest](https://github.com/telekom/pubsub-horizon-helm-charts/tree/main)** |      **-**       |       **-**        |     ✅     |
-| [Pubsub-Horizon-Comet](https://github.com/telekom/pubsub-horizon-comet)                 |      [latest](https://github.com/telekom/pubsub-horizon-comet/tree/main)      |        -         |         -          |     ✅     |
-| [Pubsub-Horizon-Galaxy](https://github.com/telekom/pubsub-horizon-galaxy)               |     [latest](https://github.com/telekom/pubsub-horizon-galaxy/tree/main)      |        -         |         -          |     ✅     |
-| [Pubsub-Horizon-Golaris](https://github.com/telekom/pubsub-horizon-golaris)             |     [latest](https://github.com/telekom/pubsub-horizon-golaris/tree/main)     |        -         |         -          |     ✅     |
-| [Pubsub-Horizon-Polaris](https://github.com/telekom/pubsub-horizon-polaris)             |     [latest](https://github.com/telekom/pubsub-horizon-polaris/tree/main)     |        -         |         -          |     ✅     |
-| [Pubsub-Horizon-Pulsar](https://github.com/telekom/pubsub-horizon-pulsar)               |     [latest](https://github.com/telekom/pubsub-horizon-pulsar/tree/main)      |        -         |         -          |     ✅     |
-| [Pubsub-Horizon-Quasar](https://github.com/telekom/pubsub-horizon-quasar)               |     [latest](https://github.com/telekom/pubsub-horizon-quasar/tree/main)      |        -         |         -          |     ✅     |
-| [Pubsub-Horizon-Starlight](https://github.com/telekom/pubsub-horizon-starlight)         |    [latest](https://github.com/telekom/pubsub-horizon-starlight/tree/main)    |        -         |         -          |     ✅     |
-| [Pubsub-Horizon-Vortex](https://github.com/telekom/pubsub-horizon-vortex)               |     [latest](https://github.com/telekom/pubsub-horizon-vortex/tree/main)      |        -         |         -          |     ✅     |
+| **[Pubsub-Horizon-Helm-Charts](https://github.com/telekom/pubsub-horizon-helm-charts)** | **[latest](https://github.com/telekom/pubsub-horizon-helm-charts/tree/main)** |     **tbd.**     |      **tbd.**      |     ✅     |
+| [Pubsub-Horizon-Comet](https://github.com/telekom/pubsub-horizon-comet)                 |      [latest](https://github.com/telekom/pubsub-horizon-comet/tree/main)      |       tbd.       |        tbd.        |   tbd.    |
+| [Pubsub-Horizon-Galaxy](https://github.com/telekom/pubsub-horizon-galaxy)               |     [latest](https://github.com/telekom/pubsub-horizon-galaxy/tree/main)      |       tbd.       |        tbd.        |   tbd.    |
+| [Pubsub-Horizon-Golaris](https://github.com/telekom/pubsub-horizon-golaris)             |     [latest](https://github.com/telekom/pubsub-horizon-golaris/tree/main)     |       tbd.       |        tbd.        |   tbd.    |
+| [Pubsub-Horizon-Polaris](https://github.com/telekom/pubsub-horizon-polaris)             |     [latest](https://github.com/telekom/pubsub-horizon-polaris/tree/main)     |       tbd.       |        tbd.        |   tbd.    |
+| [Pubsub-Horizon-Pulsar](https://github.com/telekom/pubsub-horizon-pulsar)               |     [latest](https://github.com/telekom/pubsub-horizon-pulsar/tree/main)      |       tbd.       |        tbd.        |   tbd.    |
+| [Pubsub-Horizon-Quasar](https://github.com/telekom/pubsub-horizon-quasar)               |     [latest](https://github.com/telekom/pubsub-horizon-quasar/tree/main)      |       tbd.       |        tbd.        |   tbd.    |
+| [Pubsub-Horizon-Starlight](https://github.com/telekom/pubsub-horizon-starlight)         |    [latest](https://github.com/telekom/pubsub-horizon-starlight/tree/main)    |       tbd.       |        tbd.        |   tbd.    |
+| [Pubsub-Horizon-Vortex](https://github.com/telekom/pubsub-horizon-vortex)               |     [latest](https://github.com/telekom/pubsub-horizon-vortex/tree/main)      |       tbd.       |        tbd.        |   tbd.    |
 
 ## Additional components
 
