@@ -22,7 +22,7 @@ available with many more to follow.
 **This repository contains the overarching documentation.**
 
 For the actual code, an overview of the available repositories is available
-here: [Repositories](https://github.com/telekom/Open-Telekom-Integration-Platform/wiki/Repository-Overview).
+here: [Repositories](docs/repository_overview.md).
 
 ## Code of Conduct
 
