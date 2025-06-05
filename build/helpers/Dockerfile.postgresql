@@ -2,5 +2,5 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-ARG POSTGRESQL_VERSION=16.5
+ARG POSTGRESQL_VERSION=16.5.0
 FROM bitnami/postgresql:${POSTGRESQL_VERSION}
