@@ -16,13 +16,13 @@ jobs:
   build-bash-curl:
     uses: ./.github/workflows/_fetch_build_push_image.yml
     with:
-      source_repository: '${{ github.repository }}'
-      source_dockerfile: 'build/helpers/Dockerfile.bash-curl'
+      source_repository: "${{ github.repository }}"
+      source_dockerfile: "build/helpers/Dockerfile.bash-curl"
       source_build_args: |
         BASH_CURL_VERSION=8.13.0
-      target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/bash-curl'
-      target_architecture: 'linux/amd64, linux/arm64'
-      target_registry: 'ghcr.io'
+      target_image: "ghcr.io/${{ github.repository_owner }}/o28m/bash-curl"
+      target_architecture: "linux/amd64, linux/arm64"
+      target_registry: "ghcr.io"
       target_registry_username: ${{ github.actor }}
     secrets:
       target_registry_password: ${{ secrets.GITHUB_TOKEN }}
@@ -30,13 +30,13 @@ jobs:
   build-haproxy:
     uses: ./.github/workflows/_fetch_build_push_image.yml
     with:
-      source_repository: '${{ github.repository }}'
-      source_dockerfile: 'build/helpers/Dockerfile.haproxy'
+      source_repository: "${{ github.repository }}"
+      source_dockerfile: "build/helpers/Dockerfile.haproxy"
       source_build_args: |
         HAPROXY_VERSION=3.1.6-alpine
-      target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/haproxy'
-      target_architecture: 'linux/amd64, linux/arm64'
-      target_registry: 'ghcr.io'
+      target_image: "ghcr.io/${{ github.repository_owner }}/o28m/haproxy"
+      target_architecture: "linux/amd64, linux/arm64"
+      target_registry: "ghcr.io"
       target_registry_username: ${{ github.actor }}
     secrets:
       target_registry_password: ${{ secrets.GITHUB_TOKEN }}
@@ -44,13 +44,13 @@ jobs:
   build-postgresql:
     uses: ./.github/workflows/_fetch_build_push_image.yml
     with:
-      source_repository: '${{ github.repository }}'
-      source_dockerfile: 'build/helpers/Dockerfile.postgresql'
+      source_repository: "${{ github.repository }}"
+      source_dockerfile: "build/helpers/Dockerfile.postgresql"
       source_build_args: |
-        POSTGRES_VERSION=16.5
-      target_image: 'ghcr.io/${{ github.repository_owner }}/o28m/postgresql'
-      target_architecture: 'linux/amd64, linux/arm64'
-      target_registry: 'ghcr.io'
+        POSTGRES_VERSION=16.5.0
+      target_image: "ghcr.io/${{ github.repository_owner }}/o28m/postgresql"
+      target_architecture: "linux/amd64, linux/arm64"
+      target_registry: "ghcr.io"
       target_registry_username: ${{ github.actor }}
     secrets:
       target_registry_password: ${{ secrets.GITHUB_TOKEN }}
