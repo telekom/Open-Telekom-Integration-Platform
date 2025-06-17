@@ -7,7 +7,7 @@ SPDX-License-Identifier: CC0-1.0
 # Open Telekom Integration Platform
 
 <p align="center">
-    <img src="img/Open-Telekom-Integration-Platform_Visual.svg" alt="Visual" width="200">
+    <img src="img/Open-Telekom-Integration-Platform_Visual.svg" alt="Visual" width="200" height="200"/>
 </p>
 
 ## About
