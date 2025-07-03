@@ -40,13 +40,13 @@ folder. For more information visit https://reuse.software/.
 
 ## Getting Started
 
-A comprehensive guide on how to get started with the installation of the Open Telekom Integration Platform is available
-here: [Getting Started](https://github.com/telekom/Open-Telekom-Integration-Platform/wiki/Getting-Started).
+Check out our documentation section located in the [docs](./docs) directory. It provides a comprehensive overview and
+guidance for deploying the Open Telekom Integration Platform.
 
 ### How to Build
 
-We provide build scripts for the Open Telekom Integration Platform components. The build scripts are meant to be a starting
-point for your own build scripts. Please see the [build](./build) directory for more information.
+We provide build scripts for the Open Telekom Integration Platform components. The build scripts are meant to be a
+starting point for your own build scripts. Please see the [build](./build) directory for more information.
 
 ## In A Nutshell
 
