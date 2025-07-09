@@ -54,7 +54,6 @@ The **Horizon** component provides a comprehensive publish-subscribe messaging p
 - RESTful APIs for event publication
 - Event validation and schema enforcement
 - Guaranteed at-least-once delivery
-- Event deduplication and ordering
 
 **Subscription Management**
 
