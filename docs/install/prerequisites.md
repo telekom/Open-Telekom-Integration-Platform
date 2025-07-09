@@ -18,7 +18,11 @@ Currently, it is tested with Kubernetes version **1.31**.
 - Persistent Volumes (NFS or [block storage](https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html) like gp3)
 - TLS certificate management (e.g. [cert-manager](https://cert-manager.io/))
 
-## Databases
+### Recommended add-ons:
+
+- [Prometheus](https://github.com/prometheus-operator/prometheus-operator) for monitoring
+
+## Data Infrastructure (Technologies)
 
 The Open Telekom Integration Platform requires the following databases:
 
