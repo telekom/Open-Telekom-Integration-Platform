@@ -381,9 +381,9 @@ Please fork it and adjust it to your needs.
 
 4. Navigate to `Iris` using the Ingress DNS name and the provided credentials: `https://iris.<your-hostname>/auth/admin/master/console/`
 
-5. Create new realm: `default` (actually not needed because central control plane will do this during onboarding).
+5. Create new realm: `default` ( skip this if you are using central control plane for onboarding ).
 
-6. Configure the `default` realm (actually not needed because central control plane will do this during onboarding):
+6. Configure the `default` realm ( skip this if you are using central control plane for onboarding ):
    * Use the following scopes and mappers (`https://iris.<your-hostname>/auth/admin/master/console/#/default/client-scopes`):
    * Create a new client-scope named `open-telekom-integration-platform` with the type `optional`. 
    * Create a second new client-scope named `client-origin` with the type `default`.
