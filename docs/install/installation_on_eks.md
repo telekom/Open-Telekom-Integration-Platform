@@ -506,7 +506,7 @@ Please fork it and adjust it to your needs.
     ```
    </details>
 
-10. Validate the setup by requesting an access token for the `rover` client:
+9. Validate the setup by requesting an access token for the `rover` client:
     ```bash
     curl -X POST https://iris.<your-hostname>/auth/realms/rover/protocol/openid-connect/token \
     -H 'Content-Type: application/x-www-form-urlencoded' \
