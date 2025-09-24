@@ -381,9 +381,10 @@ Please fork it and adjust it to your needs.
 
 4. Navigate to `Iris` using the Ingress DNS name and the provided credentials: `https://iris.<your-hostname>/auth/admin/master/console/`
 
-5. Create two new realms: `rover` and `default`.
+5. Create new realm: `default` ( skip this if you are using central control plane for onboarding ).
 
-6. Configure the `default` realm with the following scopes and mappers (`https://iris.<your-hostname>/auth/admin/master/console/#/default/client-scopes`):
+6. Configure the `default` realm ( skip this if you are using central control plane for onboarding ):
+   * Use the following scopes and mappers (`https://iris.<your-hostname>/auth/admin/master/console/#/default/client-scopes`):
    * Create a new client-scope named `open-telekom-integration-platform` with the type `optional`. 
    * Create a second new client-scope named `client-origin` with the type `default`.
    * Add a new mapper by configuration to the `client-origin` client-scope with the following settings:
@@ -408,7 +409,9 @@ Please fork it and adjust it to your needs.
        - Add to userinfo: `On`
        - Add to access token response: `Off`
 
-7. Create a new client with the client ID `rover` in the realm `rover`:
+7. Create new realm: `rover`.
+
+8. Create a new client with the client ID `rover` in the realm `rover`:
     <details>
 
    <summary>Client Configuration</summary>
@@ -503,7 +506,7 @@ Please fork it and adjust it to your needs.
     ```
    </details>
 
-8. Validate the setup by requesting an access token for the `rover` client:
+9. Validate the setup by requesting an access token for the `rover` client:
     ```bash
     curl -X POST https://iris.<your-hostname>/auth/realms/rover/protocol/openid-connect/token \
     -H 'Content-Type: application/x-www-form-urlencoded' \
