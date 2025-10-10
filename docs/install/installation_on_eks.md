@@ -409,9 +409,9 @@ Please fork it and adjust it to your needs.
        - Add to userinfo: `On`
        - Add to access token response: `Off`
 
-7. Create new realm: `rover`.
+7. Create new realm: `rover` ( skip this if you are using the official iris helm chart which by default creates it for you ).
 
-8. Create a new client with the client ID `rover` in the realm `rover`:
+8. Create a new client with the client ID `rover` in the realm `rover` ( skip this if you are using the official iris helm chart which by default creates it for you ):
     <details>
 
    <summary>Client Configuration</summary>
