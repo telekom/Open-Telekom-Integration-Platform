@@ -22,6 +22,7 @@ Integration Platform.
 ### Installation Guides
 
 - **[Installation on EKS](install/installation_on_eks.md)** - AWS EKS deployment guide
+- **[AI Gateway Installation on EKS](install/installation_ai_gateway_on_eks.md)** - Deploy the AI Gateway alongside an existing EKS installation
 - **[Installation on Minikube](install/installation_on_minikube.md)** - Local development setup
 
 ## Functional Overview
