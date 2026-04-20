@@ -173,7 +173,10 @@ data:
 4. Register the new ALBs created for the AI Gateway in the NLB target group, following the same steps as for the
    regular Gateway.
 
-5. Validate the setup by accessing the AI Gateway admin API using the shared rover client:
+5. Your setup should look like this:
+   ![AI Gateway deployment](../../img/o28m_ai_gateway_deployment.svg)
+
+6. Validate the setup by accessing the AI Gateway admin API using the shared rover client:
     ```bash
     TOKEN=$(curl -X POST https://iris.<your-hostname>/auth/realms/rover/protocol/openid-connect/token \
     -H 'Content-Type: application/x-www-form-urlencoded' \
