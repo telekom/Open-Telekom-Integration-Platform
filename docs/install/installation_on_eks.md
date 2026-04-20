@@ -11,6 +11,11 @@ Integration Platform.
 Please note that the following instructions rely on defaults and may need to be adjusted to your specific requirements.
 Especially once you consider a production setup.
 
+> **Note:** The networking setup described here (internet-facing NLB, public subnets, public DNS) is shown for
+> simplicity and generality. Internet access is **optional** and heavily depends on your local environment.
+> In many production or enterprise setups you will keep all traffic internal, using private subnets, VPC Endpoint
+> Services, or dedicated connectivity instead of a public-facing load balancer.
+
 ## VPC Setup
 
 1. Create a VPC with at least two subnets in different availability zones.

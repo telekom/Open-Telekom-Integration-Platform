@@ -15,6 +15,10 @@ uses the same Helm chart, the same images, and the same configuration structure.
 - Iris is **shared** between the Gateway and the AI Gateway. No additional Iris deployment or Iris realm
   configuration is required.
 
+> **Note:** The networking setup shown here (internet-facing NLB, public DNS) is for simplicity and generality.
+> Internet access is **optional** and heavily depends on your local environment. Refer to the
+> [Installation on AWS EKS](installation_on_eks.md) guide for private connectivity alternatives.
+
 ## Prerequisites
 
 Complete the [Installation on AWS EKS](installation_on_eks.md) guide first. The following must already be in place:

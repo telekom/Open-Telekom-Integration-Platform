@@ -6,7 +6,7 @@ SPDX-FileCopyrightText: 2026 Deutsche Telekom AG
 SPDX-License-Identifier: Apache-2.0
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="1000" height="720" viewBox="0 0 1000 720"
+     width="1000" height="742" viewBox="0 0 1000 742"
      font-family="Helvetica, Arial, sans-serif">
 
   <defs>
@@ -139,7 +139,7 @@ SPDX-License-Identifier: Apache-2.0
   <rect x="710" y="656" width="240" height="32" rx="5" fill="#F0E6FF" stroke="#4D27AA" stroke-width="1.5"/>
   <text x="830" y="677" text-anchor="middle" font-size="12" fill="#4D27AA">Database: ai_gateway</text>
 
-  <!-- Legend -->
-  <rect x="20" y="635" width="960" height="8" fill="none"/>
+  <!-- Internet access note -->
+  <text x="500" y="733" text-anchor="middle" font-size="10" font-style="italic" fill="#545B64">Note: Internet access is optional and depends on your local setup. The diagram shows a public internet-facing configuration for simplicity.</text>
 
 </svg>
