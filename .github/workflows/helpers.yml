@@ -19,7 +19,7 @@ jobs:
       source_repository: "${{ github.repository }}"
       source_dockerfile: "build/helpers/Dockerfile.bash-curl"
       source_build_args: |
-        BASH_CURL_VERSION=8.13.0
+        BASH_CURL_VERSION=8.20.0
       target_image: "ghcr.io/${{ github.repository_owner }}/o28m/bash-curl"
       target_architecture: "linux/amd64, linux/arm64"
       target_registry: "ghcr.io"
@@ -33,7 +33,7 @@ jobs:
       source_repository: "${{ github.repository }}"
       source_dockerfile: "build/helpers/Dockerfile.haproxy"
       source_build_args: |
-        HAPROXY_VERSION=3.1.6-alpine
+        HAPROXY_VERSION=3.2.10-alpine
       target_image: "ghcr.io/${{ github.repository_owner }}/o28m/haproxy"
       target_architecture: "linux/amd64, linux/arm64"
       target_registry: "ghcr.io"
@@ -47,7 +47,7 @@ jobs:
       source_repository: "${{ github.repository }}"
       source_dockerfile: "build/helpers/Dockerfile.postgresql"
       source_build_args: |
-        POSTGRES_VERSION=16.5.0
+        POSTGRESQL_VERSION=17.10-trixie
       target_image: "ghcr.io/${{ github.repository_owner }}/o28m/postgresql"
       target_architecture: "linux/amd64, linux/arm64"
       target_registry: "ghcr.io"
