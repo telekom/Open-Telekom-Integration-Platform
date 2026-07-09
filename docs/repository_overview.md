@@ -58,6 +58,18 @@ exists and can therefore be recommended for productive use.
 
 > **Note:** [Pubsub-Horizon-Polaris](https://github.com/telekom/pubsub-horizon-polaris) is deprecated and will be replaced by [Pubsub-Horizon-Golaris](https://github.com/telekom/pubsub-horizon-golaris). However, the horizon-all Helm chart still references Polaris and the Golaris Helm chart is not part of the Horizon Helm charts repository yet. Also, existing Horizon deployment guides still rely on old components/component versions. This will be revised and reworked in the future.
 
+## Kubernetes Version Compatibility
+
+| Component | Version | Minimum Kubernetes Version | Recommended Kubernetes Version | Maximum Tested Version | Notes |
+|-----------|---------|----------------------------|--------------------------------|------------------------|-------|
+| **Gateway-Kong-Charts** | 9.9.2 | 1.21+ | 1.30+ | 1.34 | Uses `apps/v1` Deployment, `networking.k8s.io/v1` Ingress |
+| **Gateway-Kong-Charts** | 9.6.1 | 1.21+ | 1.30+ | 1.34 | Uses `apps/v1` Deployment, `networking.k8s.io/v1` Ingress |
+| **Gateway-Rotator** | 1.1.2 | 1.27+ | 1.30+ | 1.34 | Built with k8s.io/client-go v0.36.2, uses `rbac.authorization.k8s.io/v1` |
+| **Gateway-Rotator** | 1.0.0 | 1.27+ | 1.30+ | 1.34 | Built with k8s.io/client-go v0.32.1, uses `rbac.authorization.k8s.io/v1` |
+| **Identity-Iris-Keycloak-Charts** | 3.0.0 | 1.30+ | 1.30+ | 1.34 | Explicit `kubeVersion: '>= 1.30.0'` in Chart.yaml, uses `policy/v1` PodDisruptionBudget |
+
+> **Note:** The maximum tested version (1.34) has been validated in non-production environments and has been stable for several weeks. Production environments are currently running Kubernetes 1.33, with an update to 1.34 planned in the near future.
+
 ## Additional components
 
 ### Gateway
