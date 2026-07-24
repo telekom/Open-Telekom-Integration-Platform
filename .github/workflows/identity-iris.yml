@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   build-identity-iris-keycloak:
-    uses: ./.github/workflows/_fetch_build_push_image.yml
+    uses: ./.github/workflows/_fetch_build_push_docker_image.yml
     with:
       source_repository: "telekom/identity-iris-keycloak-image"
       source_dockerfile: "Dockerfile"

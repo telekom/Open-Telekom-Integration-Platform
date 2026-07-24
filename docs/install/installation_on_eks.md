@@ -303,7 +303,7 @@ Please fork it and adjust it to your needs.
    * identity-iris-keycloak: [`https://github.com/telekom/identity-iris-keycloak-image`](https://github.com/telekom/identity-iris-keycloak-image) with `./Dockerfile.multi-stage`
 
 2. Build the Gateway:
-   * gateway-jumper: [`https://github.com/telekom/gateway-jumper`](https://github.com/telekom/gateway-jumper) with `./Dockerfile.multi-stage`
+   * gateway-jumper: [`https://github.com/telekom/gateway-jumper`](https://github.com/telekom/gateway-jumper) with `./mvnw compile jib:build` (requires Java 25)
    * gateway-issuer-service-go: [`https://github.com/telekom/gateway-issuer-service-go`](https://github.com/telekom/gateway-issuer-service-go) with `./Dockerfile.multi-stage`
    * gateway-bash-curl: A helper image to bootstrap and configure the Gateway.  
      This image can be built using the following Dockerfile:

@@ -105,11 +105,11 @@ Clone the [`telekom/gateway-jumper`](https://github.com/telekom/gateway-jumper) 
 git clone https://github.com/telekom/gateway-jumper.git
 ```
 
-Then, build the image:
+Then, build the image using Maven and Jib (requires Java 25):
 
 ```shell
 cd gateway-jumper
-docker build --platform linux/amd64 -t gateway-jumper -f Dockerfile.multi-stage .
+./mvnw compile jib:dockerBuild -Djib.to.image=gateway-jumper
 ```
 
 #### Gateway-Issuer-Service-Go
