@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   build-bash-curl:
-    uses: ./.github/workflows/_fetch_build_push_image.yml
+    uses: ./.github/workflows/_fetch_build_push_docker_image.yml
     with:
       source_repository: "${{ github.repository }}"
       source_dockerfile: "build/helpers/Dockerfile.bash-curl"
@@ -28,7 +28,7 @@ jobs:
       target_registry_password: ${{ secrets.GITHUB_TOKEN }}
 
   build-haproxy:
-    uses: ./.github/workflows/_fetch_build_push_image.yml
+    uses: ./.github/workflows/_fetch_build_push_docker_image.yml
     with:
       source_repository: "${{ github.repository }}"
       source_dockerfile: "build/helpers/Dockerfile.haproxy"
@@ -42,7 +42,7 @@ jobs:
       target_registry_password: ${{ secrets.GITHUB_TOKEN }}
 
   build-postgresql:
-    uses: ./.github/workflows/_fetch_build_push_image.yml
+    uses: ./.github/workflows/_fetch_build_push_docker_image.yml
     with:
       source_repository: "${{ github.repository }}"
       source_dockerfile: "build/helpers/Dockerfile.postgresql"

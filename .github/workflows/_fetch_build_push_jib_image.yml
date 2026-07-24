@@ -1,0 +1,91 @@
+# SPDX-FileCopyrightText: 2026 Deutsche Telekom AG
+#
+# SPDX-License-Identifier: Apache-2.0
+
+name: fetch_build_push_jib_image
+
+on:
+  workflow_call:
+    inputs:
+      source_repository:
+        description: "Repository to fetch"
+        required: true
+        type: string
+      source_branch:
+        description: "Branch to fetch"
+        required: false
+        default: "main"
+        type: string
+      java_version:
+        description: "Java version to use"
+        required: false
+        default: "21"
+        type: string
+      java_distribution:
+        description: "Java distribution to use (e.g. temurin, zulu)"
+        required: false
+        default: "temurin"
+        type: string
+      target_image:
+        description: "Full path, name and tag of the target image"
+        required: true
+        type: string
+      target_registry:
+        description: "Registry to push the image to"
+        required: false
+        default: ""
+        type: string
+      target_registry_username:
+        description: "Username for the registry"
+        required: false
+        default: ""
+        type: string
+      target_platforms:
+        description: "Comma-separated list of target platforms (e.g. linux/amd64,linux/arm64)"
+        required: false
+        default: "linux/amd64"
+        type: string
+      maven_args:
+        description: "Additional Maven arguments"
+        required: false
+        default: ""
+        type: string
+
+    secrets:
+      target_registry_password:
+        description: "Password for the registry"
+        required: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.source_repository }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ inputs.source_branch }}
+          submodules: "true"
+
+      - name: Set up JDK
+        uses: actions/setup-java@v5
+        with:
+          java-version: ${{ inputs.java_version }}
+          distribution: ${{ inputs.java_distribution }}
+          cache: "maven"
+
+      - name: Build and push image with Jib
+        run: |
+          mvn compile jib:build -B \
+            -Djib.to.image=${{ inputs.target_image }} \
+            -Djib.to.auth.username=${{ inputs.target_registry_username }} \
+            -Djib.to.auth.password=${{ secrets.target_registry_password }} \
+            -Djib.from.platforms=${{ inputs.target_platforms }} \
+            ${{ inputs.maven_args }}
