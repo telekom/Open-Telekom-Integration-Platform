@@ -1,0 +1,33 @@
+docs/install/installation_on_eks.md
+  s_fcb3f4a499a0fc::t_d00ff99d1240e2 306
+build/README.md
+  s_fcb3f4a499a0fc::t_d00ff99d1240e2 63
+  s_fcb3f4a499a0fc::t_351dd46d6aa1c7 60-62
+  s_fcb3f4a499a0fc::t_d576ed051b2b15 64-66
+.github/workflows/gateway.yml
+  s_fcb3f4a499a0fc::t_0d7f52869b0f6d 20
+  s_fcb3f4a499a0fc::t_1a7d897ced07ab 19
+  s_fcb3f4a499a0fc::t_3accf3b021d4dc 21-23
+.github/workflows/_fetch_build_push_jib_image.yml
+  s_fcb3f4a499a0fc::t_8b234685962115 22
+  s_fcb3f4a499a0fc::t_9656dcd8a228d1 19-21
+  s_fcb3f4a499a0fc::t_ebcb79d8d0ccb4 23-25
+docs/install/installation_on_minikube.md
+  s_fcb3f4a499a0fc::t_d00ff99d1240e2 108
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "3226df8e88579c96c6e46a0e644e6fcab24b4a16",
+  "prompts": {},
+  "sessions": {
+    "s_fcb3f4a499a0fc": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_06c9562b0ffeqV2O7dhCRvuerS",
+        "model": "unknown"
+      },
+      "human_author": "Miká Juznik <mika.juznik@telekom.de>"
+    }
+  }
+}
