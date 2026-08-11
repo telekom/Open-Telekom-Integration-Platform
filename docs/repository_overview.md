@@ -37,8 +37,8 @@ exists and can therefore be recommended for productive use.
 
 | Name                                                                      |                                Latest                                 |                                   Staging                                   |                              Production Ready                               |
 |---------------------------------------------------------------------------|:---------------------------------------------------------------------:|:---------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|
-| **[Gateway-Kong-Charts](https://github.com/telekom/gateway-kong-charts)** | **[latest](https://github.com/telekom/gateway-kong-charts/releases)** | **[9.9.2](https://github.com/telekom/gateway-kong-charts/releases/9.9.2)** | **[9.6.1](https://github.com/telekom/gateway-kong-charts/releases/9.6.1)** |
-| [Gateway-Rotator](https://github.com/telekom/gateway-rotator)             |     [latest](https://github.com/telekom/gateway-rotator/releases)     |     [1.1.2](https://github.com/telekom/gateway-rotator/releases/v1.1.2)     |     [1.0.0](https://github.com/telekom/gateway-rotator/releases/v1.0.0)     |
+| **[Gateway-Kong-Charts](https://github.com/telekom/gateway-kong-charts)** | **[latest](https://github.com/telekom/gateway-kong-charts/releases)** | **[9.13.2](https://github.com/telekom/gateway-kong-charts/releases/9.13.2)** | **[9.13.1](https://github.com/telekom/gateway-kong-charts/releases/9.13.1)** |
+| [Gateway-Rotator](https://github.com/telekom/gateway-rotator)             |     [latest](https://github.com/telekom/gateway-rotator/releases)     |     [1.1.2](https://github.com/telekom/gateway-rotator/releases/v1.1.2)     |     [1.1.2](https://github.com/telekom/gateway-rotator/releases/v1.1.2)     |
 
 > **Notes:**
 > - [Gateway-Issuer-Service](https://github.com/telekom/gateway-issuer-service) is deprecated and was used for chart versions < 7.0.0. The new Go implementation ([Gateway-Issuer-Service-Go](https://github.com/telekom/gateway-issuer-service-go)) is the successor and will be properly referenced in newer Helm charts.
@@ -48,7 +48,7 @@ exists and can therefore be recommended for productive use.
 
 | Name                                                                                          |                                     Latest                                      |                                       Staging                                        |                                   Production Ready                                   |
 |-----------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------:|
-| **[Identity-Iris-Keycloak-Charts](https://github.com/telekom/identity-iris-keycloak-charts)** | **[latest](https://github.com/telekom/identity-iris-keycloak-charts/releases)** | **[3.0.0](https://github.com/telekom/identity-iris-keycloak-charts/releases/3.0.0)** | **[3.0.0](https://github.com/telekom/identity-iris-keycloak-charts/releases/3.0.0)** |
+| **[Identity-Iris-Keycloak-Charts](https://github.com/telekom/identity-iris-keycloak-charts)** | **[latest](https://github.com/telekom/identity-iris-keycloak-charts/releases)** | **[3.2.0](https://github.com/telekom/identity-iris-keycloak-charts/releases/3.2.0)** | **[3.2.0](https://github.com/telekom/identity-iris-keycloak-charts/releases/3.2.0)** |
 
 ### Event-Driven Integration / Pubsub
 
