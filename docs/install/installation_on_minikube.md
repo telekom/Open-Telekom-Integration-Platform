@@ -16,6 +16,9 @@ If you do not know what minikube is, please refer to the [minikube documentation
 This guide is written for and tested with minikube version v1.32.0, kubernetes version v1.28.3, and Helm version v3.14.0
 on macOS arm64 with Docker.
 
+A local JDK 25 installation is required to build the Gateway-Jumper image. The Maven wrapper downloads Maven, but it
+does not install a JDK.
+
 **Please note that there is currently a bug with Docker v25 preventing macOS environments to successfully emulate
 x86-environments. Please consider using Docker v24.**
 

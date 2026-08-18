@@ -60,13 +60,14 @@ Used for Java/Maven components that build container images with [Jib](https://gi
 |----------------------------|--------------------------------------------------------------------|---------------|----------|---------------------------------------------------------------------|
 | `source_repository`        | The repository to pull the source code from                        | `''`          | Yes      | `telekom/gateway-jumper`                                            |
 | `source_branch`            | The branch to pull the source code from                            | `main`        | No       | `main`                                                              |
-| `java_version`             | The Java version to use for the build                              | `21`          | No       | `25`                                                                |
+| `java_version`             | The Java version to use for the build                              | `25`          | No       | `25`                                                                |
+| `java_distribution`        | The Java distribution to use for the build                         | `temurin`     | No       | `zulu`                                                              |
 | `target_image`             | The name of the image to build                                     | `''`          | Yes      | `ghcr.io/${{ github.repository_owner }}/o28m/gateway-jumper:latest` |
-| `target_platforms`         | Comma-separated list of target platforms                           | `linux/amd64` | No       | `linux/amd64,linux/arm64`                                           |
-| `target_registry`          | The registry to push the image to                                  | `''`          | No       | `ghcr.io`                                                           |
+| `target_platforms`         | Comma-separated target platforms; empty uses the POM configuration | `''`          | No       | `linux/amd64,linux/arm64`                                           |
+| `target_registry`          | The registry to push to; empty builds in the local Docker daemon    | `''`          | No       | `ghcr.io`                                                           |
 | `target_registry_username` | The username to authenticate with the registry                     | `''`          | No       | `${{ github.actor }}`                                               |
 | `target_registry_password` | The password to authenticate with the registry                     | `''`          | No       | `${{ secrets.GITHUB_TOKEN }}`                                       |
-| `maven_args`               | Additional Maven arguments to pass to the build                    | `''`          | No       | `-DskipTests`                                                       |
+| `maven_args`               | Additional Maven arguments to pass to the build                    | `''`          | No       | `-Djib.console=plain`                                               |
 
 ## Where are the images?
 
