@@ -19,7 +19,7 @@ on:
       java_version:
         description: "Java version to use"
         required: false
-        default: "21"
+        default: "25"
         type: string
       java_distribution:
         description: "Java distribution to use (e.g. temurin, zulu)"
@@ -43,7 +43,7 @@ on:
       target_platforms:
         description: "Comma-separated list of target platforms (e.g. linux/amd64,linux/arm64)"
         required: false
-        default: "linux/amd64"
+        default: ""
         type: string
       maven_args:
         description: "Additional Maven arguments"
@@ -63,7 +63,6 @@ jobs:
     permissions:
       contents: read
       packages: write
-      id-token: write
 
     steps:
       - name: Checkout repository
@@ -73,6 +72,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: ${{ inputs.source_branch }}
           submodules: "true"
+          persist-credentials: false
 
       - name: Set up JDK
         uses: actions/setup-java@v5
@@ -81,11 +81,29 @@ jobs:
           distribution: ${{ inputs.java_distribution }}
           cache: "maven"
 
-      - name: Build and push image with Jib
+      - name: Log in to registry
+        if: inputs.target_registry != ''
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ inputs.target_registry }}
+          username: ${{ inputs.target_registry_username }}
+          password: ${{ secrets.target_registry_password }}
+
+      - name: Build image with Jib
+        env:
+          JIB_GOAL: ${{ inputs.target_registry != '' && 'jib:build' || 'jib:dockerBuild' }}
+          MAVEN_ARGS: ${{ inputs.maven_args }}
+          TARGET_IMAGE: ${{ inputs.target_image }}
+          TARGET_PLATFORMS: ${{ inputs.target_platforms }}
         run: |
-          mvn compile jib:build -B \
-            -Djib.to.image=${{ inputs.target_image }} \
-            -Djib.to.auth.username=${{ inputs.target_registry_username }} \
-            -Djib.to.auth.password=${{ secrets.target_registry_password }} \
-            -Djib.from.platforms=${{ inputs.target_platforms }} \
-            ${{ inputs.maven_args }}
+          read -r -a maven_args <<< "${MAVEN_ARGS//$'\n'/ }"
+          target_platforms="${TARGET_PLATFORMS//[[:space:]]/}"
+          platform_args=()
+          if [[ -n "$target_platforms" ]]; then
+            platform_args=("-Djib.from.platforms=$target_platforms")
+          fi
+
+          ./mvnw compile "$JIB_GOAL" -B \
+            "-Djib.to.image=$TARGET_IMAGE" \
+            "${platform_args[@]}" \
+            "${maven_args[@]}"

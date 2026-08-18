@@ -297,13 +297,21 @@ Install the Open Telekom Integration Platform using the following steps.
 Examples containing build scripts for building all necessary images can be found under [https://github.com/telekom/Open-Telekom-Integration-Platform/blob/main/build/README.md](https://github.com/telekom/Open-Telekom-Integration-Platform/blob/main/build/README.md).  
 Please fork it and adjust it to your needs.
 
+A local JDK 25 installation is required to build the Gateway-Jumper image. The Maven wrapper downloads Maven, but it
+does not install a JDK.
+
 **We are not providing a public image repository for the Open Telekom Integration Platform.**
 
 1. Build Identity-Iris:
    * identity-iris-keycloak: [`https://github.com/telekom/identity-iris-keycloak-image`](https://github.com/telekom/identity-iris-keycloak-image) with `./Dockerfile.multi-stage`
 
 2. Build the Gateway:
-   * gateway-jumper: [`https://github.com/telekom/gateway-jumper`](https://github.com/telekom/gateway-jumper) with `./mvnw compile jib:build` (requires Java 25)
+   * gateway-jumper: Clone [`https://github.com/telekom/gateway-jumper`](https://github.com/telekom/gateway-jumper),
+     log in to your registry, and build the image (requires Java 25):
+     ```shell
+     docker login <registry>
+     ./mvnw compile jib:build -Djib.to.image=<registry>/<namespace>/gateway-jumper
+     ```
    * gateway-issuer-service-go: [`https://github.com/telekom/gateway-issuer-service-go`](https://github.com/telekom/gateway-issuer-service-go) with `./Dockerfile.multi-stage`
    * gateway-bash-curl: A helper image to bootstrap and configure the Gateway.  
      This image can be built using the following Dockerfile:
