@@ -1,0 +1,34 @@
+.github/workflows/_fetch_build_push_jib_image.yml
+  s_dbee3ba1454b38::t_0c5c0b4056858b 92,94,106
+  s_dbee3ba1454b38::t_ae4f326843f73a 22,46,101-104,108
+  s_dbee3ba1454b38::t_d89ddb9bf7f648 75,93,95-97,99-100,105,107,109
+  s_dbee3ba1454b38::t_7cbad090c567a8 84-91
+docs/install/installation_on_minikube.md
+  s_dbee3ba1454b38::t_3936331e1e92aa 19-21
+.github/workflows/_fetch_build_push_image.yml
+  s_dbee3ba1454b38::t_72cb3f4491b60e 1-73
+build/README.md
+  s_dbee3ba1454b38::t_3936331e1e92aa 63-64,66,70
+  s_dbee3ba1454b38::t_0c5c0b4056858b 67
+.github/workflows/_fetch_build_push_docker_image.yml
+  s_dbee3ba1454b38::t_e8189e66d9d01f 5,98
+docs/install/installation_on_eks.md
+  s_dbee3ba1454b38::t_3d99dee349db0c 309-314
+  s_dbee3ba1454b38::t_3936331e1e92aa 300-302
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "4b62faf5c29eb0323f7c276c7762a00d779c730f",
+  "prompts": {},
+  "sessions": {
+    "s_dbee3ba1454b38": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_feb21596effeyNbHeOaQ3lTdzi",
+        "model": "unknown"
+      },
+      "human_author": "Miká Juznik <mika.juznik@telekom.de>"
+    }
+  }
+}
